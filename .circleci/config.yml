@@ -21,8 +21,7 @@ jobs:
               --url https://circleci.com/api/v2/project/gh/jenny-miggin/multi-repo-demo/pipeline \
               --header "Circle-Token: $CIRCLE_API_TOKEN" \
               --header "content-type: application/json" \
-              --data '{"branch":"main"}, ,"parameters":{"service-name":"$CIRCLE_PROJECT_REPONAME"}'
-
+              --data '{"branch":"main","parameters":{"service-name":"$CIRCLE_PROJECT_REPONAME"}}'
 workflows:
   run-jobs:
     jobs:
